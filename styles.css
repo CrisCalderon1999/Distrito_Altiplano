@@ -1,0 +1,358 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #1a3a6b;
+  --blue:      #2b5fad;
+  --blue-mid:  #3a7bc8;
+  --blue-light:#ddeaf7;
+  --blue-pale: #f0f6ff;
+  --white:     #ffffff;
+  --text-dark: #0f2444;
+  --text-muted:#4a6080;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--navy);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  border-bottom: 3px solid var(--blue-mid);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.nav-title {
+  font-family: 'Cinzel', serif;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.nav-title span {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: white; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--blue) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.06;
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.hero-icon {
+  display: block;
+  margin: 0 auto 1.25rem;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.4rem;
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: rgba(255,255,255,0.35);
+  margin: 1.25rem auto 1.5rem;
+}
+
+.hero-verse {
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+  font-size: 0.95rem;
+  max-width: 440px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 28px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s;
+  border-radius: 2px;
+}
+
+.btn:hover { background: rgba(255,255,255,0.12); }
+
+.btn-solid {
+  background: white;
+  color: var(--navy);
+  border-color: white;
+  margin-right: 12px;
+}
+
+.btn-solid:hover { background: var(--blue-light); }
+
+/* ── SECTIONS ── */
+.section { padding: 3.5rem 2rem; }
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-bar {
+  width: 40px;
+  height: 3px;
+  background: var(--blue-mid);
+  margin-bottom: 1.75rem;
+}
+
+/* ── CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--blue-pale);
+  border: 0.5px solid var(--blue-light);
+  border-top: 3px solid var(--blue-mid);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--blue-light);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── ANUNCIOS */
+.announcements {
+  background: var(--blue-pale);
+  border-left: 4px solid var(--blue-mid);
+}
+
+.ann-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ann-item {
+  background: white;
+  border: 0.5px solid var(--blue-light);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ann-date {
+  min-width: 46px;
+  text-align: center;
+  background: var(--navy);
+  color: white;
+  border-radius: 4px;
+  padding: 5px 6px;
+}
+
+.ann-date .day {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+
+.ann-date .mon {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.ann-text h4 {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.ann-text p {
+  font-size: 0.79rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── CONTACTO */
+.contact {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+.contact .section-title { color: white; }
+.contact .section-bar { background: rgba(255,255,255,0.35); margin-left: auto; margin-right: auto; }
+
+.contact > p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.contact-box {
+  background: rgba(255,255,255,0.07);
+  border: 0.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+  text-align: left;
+}
+
+.contact-box strong {
+  display: block;
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+/* ── FOOTER */
+footer {
+  background: #0f2444;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.5px;
+}
+
+/* ── RESPONSIVE */
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .hero h1 { font-size: 1.8rem; }
+}
