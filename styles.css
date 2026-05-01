@@ -10,6 +10,41 @@
   --text-dark: #0f2444;
   --text-muted:#4a6080;
 }
+
+.social {
+  text-align: center;
+  background: var(--blue-pale);
+}
+
+.social-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1.5px solid var(--blue-mid);
+  color: var(--blue);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.social-icon:hover {
+  background: var(--blue-mid);
+  color: white;
+}
+
 .nav-logo {
   width: 65px;
   height: 65px;
