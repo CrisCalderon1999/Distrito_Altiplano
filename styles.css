@@ -153,6 +153,111 @@ body {
   color: var(--text-dark);
 }
 
+/*
+Carrusel
+*/
+/* ── CARRUSEL ── */
+.carrusel-section { background: var(--blue-pale); }
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.carrusel-track-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carrusel-slide {
+  min-width: calc(100% / 3);
+  position: relative;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 2px solid var(--blue-light);
+}
+
+.carrusel-caption {
+  position: absolute;
+  bottom: 8px;
+  left: 6px;
+  right: 6px;
+  background: rgba(26, 58, 107, 0.78);
+  color: white;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 0 0 8px 8px;
+  backdrop-filter: blur(4px);
+}
+
+.carrusel-btn {
+  background: var(--navy);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  line-height: 1;
+}
+
+.carrusel-btn:hover {
+  background: var(--blue-mid);
+  transform: scale(1.08);
+}
+
+.carrusel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.25rem;
+}
+
+.carrusel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue-mid);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carrusel-dots .dot.active {
+  background: var(--navy);
+  transform: scale(1.25);
+}
+
+@media (max-width: 600px) {
+  .carrusel-slide { min-width: 100%; }
+  .carrusel-btn { width: 32px; height: 32px; font-size: 1.1rem; }
+}
+
 /* ── NAV ── */
 nav {
   background: var(--navy);
