@@ -10,7 +10,16 @@
   --text-dark: #0f2444;
   --text-muted:#4a6080;
 }
+.nav-logo {
+  width: 65px;
+  height: 65px;
+}
 
+.nav-logo img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+}
 body {
   font-family: 'Lato', sans-serif;
   background: var(--white);
