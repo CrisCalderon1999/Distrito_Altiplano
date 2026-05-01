@@ -55,6 +55,51 @@
     </div>
   </section>
 
+  <!-- HISTORIA -->
+<section class="section historia">
+  <h2 class="section-title">Nuestra Historia</h2>
+  <div class="section-bar"></div>
+
+  <div class="historia-card">
+    <div class="historia-icon">
+      <i class="fas fa-landmark"></i>
+    </div>
+
+    <div class="historia-body">
+
+      <!-- Texto corto (siempre visible) -->
+      <p class="historia-preview">
+        El Distrito del Altiplano nació en el año <strong>2016</strong> después de ser reestructurado y establecido como un distrito. Anteriormente se le llamaba <em>Región de Jóvenes del Altiplano</em>. Actualmente está formado por <strong>16 sociedades</strong> repartidas en 5 municipios del departamento de Quetzaltenango...
+      </p>
+
+      <!-- Texto completo (oculto por defecto) -->
+      <div class="historia-full" id="historiaFull">
+        <p>San Carlos Sija, Sibilia, Cabricán, Huitán y Palestina de los Altos son los municipios donde se encuentran repartidas las 16 sociedades. Entre los años 2016 a 2019 se empezaron a realizar actividades muy interesantes: talleres para jóvenes, foros para la resolución de dudas de la juventud cristiana, la conmemoración del mes de la Biblia, la Reforma y el Día del Esforzador Cristiano.</p>
+
+        <p>En el año <strong>2019</strong> se realizó el primer campamento a nivel de distrito. Lamentablemente, tras la pandemia de <strong>2020</strong>, el distrito quedó apagado por un tiempo.</p>
+
+        <p>En <strong>2022</strong>, las actividades fueron nuevamente retomadas con buenas asistencias por parte de muchos jóvenes. En ese mismo año, el Distrito del Altiplano y el Distrito 12+1 se unieron para realizar un campamento conjunto donde hubo un intercambio de jóvenes que pudieron conocer más acerca de Dios y de la obra que se hace en su nombre.</p>
+
+        <p>Para el año <strong>2023</strong> ocurre el primer cambio de directiva desde 2016, por lo que actualmente el Distrito del Altiplano solamente ha tenido dos directivas. A pesar del poco tiempo desde la reorganización, la gracia de Dios ha estado sobre nosotros, recordando nuestro lema: <em>"Por Cristo y por su Iglesia"</em> y <em>"Esforzador una vez, esforzador para siempre"</em>.</p>
+
+        <p>Actualmente el Distrito del Altiplano cuenta con una población de <strong>450 jóvenes activos</strong> en sus diferentes sociedades, destacando las culturas Indígena y Ladina.</p>
+
+        <blockquote class="historia-versiculo">
+          <p>"Así que, hermanos, os ruego por las misericordias de Dios, que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable a Dios, que es vuestro culto racional. No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento, para que comprobéis cuál sea la buena voluntad de Dios, agradable y perfecta."</p>
+          <cite>— Romanos 12:1-2</cite>
+        </blockquote>
+      </div>
+
+      <!-- Botón -->
+      <button class="btn-vermas" id="btnVerMas" onclick="toggleHistoria()">
+        <span id="btnTexto">Ver más</span>
+        <i class="fas fa-chevron-down" id="btnIcono"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+
   <!-- CARRUSEL -->
 <section class="section carrusel-section">
   <h2 class="section-title">Galería</h2>
@@ -101,46 +146,57 @@
   <div class="carrusel-dots" id="carruselDots"></div>
 </section>
 
-  <!-- MINISTERIOS -->
-  <section class="section">
-    <h2 class="section-title">Ministerios</h2>
-    <div class="section-bar"></div>
-    <div class="cards">
+  <!-- ESTADÍSTICAS Y SOCIEDADES -->
+<section class="section estadisticas">
+  <h2 class="section-title">El Distrito en números</h2>
+  <div class="section-bar"></div>
 
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Jóvenes</h3>
-        <p>Actividades y discipulado para la juventud del distrito.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
-        <h3>Biblia y oración</h3>
-        <p>Estudios bíblicos semanales para fortalecer la fe.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Comunidad</h3>
-        <p>Proyectos de servicio y apoyo a familias del altiplano.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
-        <h3>Alabanza</h3>
-        <p>Equipos de adoración que glorifican a Dios en cada iglesia.</p>
-      </div>
-
+  <!-- Contadores -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-church"></i></div>
+      <span class="stat-num" data-target="18">17</span>
+      <span class="stat-label">Sociedades</span>
     </div>
-  </section>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-users"></i></div>
+      <span class="stat-num" data-target="200">300+</span>
+      <span class="stat-label">Jóvenes activos</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <span class="stat-num" data-target="5">5</span>
+      <span class="stat-label">Municipios</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+      <span class="stat-num" data-target="2016">10</span>
+      <span class="stat-label">Año de fundación</span>
+    </div>
+  </div>
+
+  <!-- Lista de sociedades -->
+  <h3 class="soc-titulo">Nuestras Sociedades</h3>
+  <div class="soc-grid">
+    <div class="soc-item"><span class="soc-num">01</span><i class="fas fa-cross"></i>Alfa y Omega</div>
+    <div class="soc-item"><span class="soc-num">02</span><i class="fas fa-cross"></i>Arca de Noé</div>
+    <div class="soc-item"><span class="soc-num">03</span><i class="fas fa-cross"></i>Embajadores de Cristo</div>
+    <div class="soc-item"><span class="soc-num">04</span><i class="fas fa-cross"></i>Emmanuel</div>
+    <div class="soc-item"><span class="soc-num">05</span><i class="fas fa-cross"></i>Faro Juvenil</div>
+    <div class="soc-item"><span class="soc-num">06</span><i class="fas fa-cross"></i>Fuente de Luz</div>
+    <div class="soc-item"><span class="soc-num">07</span><i class="fas fa-cross"></i>Generación de Fe</div>
+    <div class="soc-item"><span class="soc-num">08</span><i class="fas fa-cross"></i>Herederos del Rey</div>
+    <div class="soc-item"><span class="soc-num">09</span><i class="fas fa-cross"></i>Heraldos de Cristo</div>
+    <div class="soc-item"><span class="soc-num">10</span><i class="fas fa-cross"></i>Hijos de Sión</div>
+    <div class="soc-item"><span class="soc-num">11</span><i class="fas fa-cross"></i>Jehová Nissi</div>
+    <div class="soc-item"><span class="soc-num">12</span><i class="fas fa-cross"></i>Luchadores por la Fe</div>
+    <div class="soc-item"><span class="soc-num">13</span><i class="fas fa-cross"></i>Luz en mi Camino</div>
+    <div class="soc-item"><span class="soc-num">14</span><i class="fas fa-cross"></i>Mensajeros de Cristo</div>
+    <div class="soc-item"><span class="soc-num">15</span><i class="fas fa-cross"></i>Seguidores de Jesucristo</div>
+    <div class="soc-item"><span class="soc-num">16</span><i class="fas fa-cross"></i>Siervos del Señor</div>
+    <div class="soc-item"><span class="soc-num">17</span><i class="fas fa-cross"></i>Unión Juvenil Petra</div>
+  </div>
+</section>
 <!-- VISIÓN Y MISIÓN -->
 <section class="section vision-mision">
   <h2 class="section-title">Quiénes somos</h2>
@@ -225,46 +281,158 @@
   </div>
 </section>
   <!-- ANUNCIOS -->
-  <section class="section announcements">
-    <h2 class="section-title">Anuncios y eventos</h2>
-    <div class="section-bar"></div>
-    <div class="ann-list">
+ <!-- ANUNCIOS -->
+<section class="section announcements">
+  <h2 class="section-title">Anuncios y eventos</h2>
+  <div class="section-bar"></div>
+  <p class="ann-subtitulo">Calendario de actividades año 2026</p>
+  <div class="ann-list">
 
-      <div class="ann-item">
-        <div class="ann-date">
-          <span class="day">15</span>
-          <span class="mon">May</span>
+    <div class="ann-item pasado"> 
+      <div class="ann-date">
+        <span class="day">15</span>
+        <span class="mon">Feb</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-star"></i> Especial</span>
         </div>
-        <div class="ann-text">
-          <h4>Retiro distrital de jóvenes</h4>
-          <p>Encuentro de liderazgo y crecimiento espiritual para todos los grupos juveniles.</p>
+        <h4>Día del Esforzador Cristiano</h4>
+        <p>Instalación de Directiva de Distrito.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Templo Iglesia Presbiteriana "Rosa de Sarón"</span>
+          <span><i class="fas fa-clock"></i> 2:30 PM en adelante</span>
         </div>
       </div>
-
-      <div class="ann-item">
-        <div class="ann-date">
-          <span class="day">22</span>
-          <span class="mon">May</span>
-        </div>
-        <div class="ann-text">
-          <h4>Culto de unidad</h4>
-          <p>Todas las iglesias del distrito reunidas en un solo culto de adoración.</p>
-        </div>
-      </div>
-
-      <div class="ann-item">
-        <div class="ann-date">
-          <span class="day">01</span>
-          <span class="mon">Jun</span>
-        </div>
-        <div class="ann-text">
-          <h4>Conferencia de pastores</h4>
-          <p>Capacitación y visión para líderes y pastores del altiplano.</p>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <div class="ann-item pasado"> 
+      <div class="ann-date">
+        <span class="day">05</span>
+        <span class="mon">Abr</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-church"></i> Culto</span>
+        </div>
+        <h4>Culto de Resurrección</h4>
+        <p>Celebración conjunta del distrito en conmemoración de la resurrección de Cristo.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Templo Iglesia Presbiteriana "Alfa y Omega" San José Chicalquix Sector 2</span>
+          <span><i class="fas fa-clock"></i> Por definirse</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">27</span>
+        <span class="mon">Jun</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-hands-helping"></i> Talleres</span>
+        </div>
+        <h4>Talleres y tarde de convivencia</h4>
+        <p>Espacio de formación y fraternidad entre los jóvenes del distrito.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Templo Iglesia Presbiteriana "Huerto Getsemaní" Las Cruces</span>
+          <span><i class="fas fa-clock"></i> 8:00 AM en adelante</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">16</span>
+        <span class="mon">Ago</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-fire"></i> Fogata</span>
+        </div>
+        <h4>Fogata</h4>
+        <p>Noche de comunión, alabanza y palabra alrededor de la fogata distrital.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Templo Iglesia Presbiteriana "Getsemaní" El Barreal</span>
+          <span><i class="fas fa-clock"></i> 4:00 PM en adelante</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">19</span>
+        <span class="mon">Sep</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-music"></i> Concurso</span>
+        </div>
+        <h4>Concurso de bandas cristianas</h4>
+        <p>Competencia musical para glorificar a Dios a través de la alabanza entre las sociedades del distrito.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Pendiente</span>
+          <span><i class="fas fa-clock"></i> Pendiente</span>
+        </div>
+      </div>
+    </div>
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">25</span>
+        <span class="mon">Oct</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-flag"></i> Conmemoración</span>
+        </div>
+        <h4>Desfile en Conmemoración de la Reforma Protestante</h4>
+        <p>Marcha distrital en honor a la Reforma Protestante.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Municipio de Huitan, Quetzaltenango</span>
+          <span><i class="fas fa-clock"></i> 2:00 PM en adelante</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">18</span>
+        <span class="mon">Dic</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-campground"></i> Campamento</span>
+        </div>
+        <h4>Campamento Distrital</h4>
+        <p>Campamento de fin de año para los jóvenes del distrito, días 18, 19 y 20 de diciembre.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i>Campamentos Monte Sion</span>
+          <span><i class="fas fa-clock"></i> Pendiente</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ann-item">
+      <div class="ann-date">
+        <span class="day">27</span>
+        <span class="mon">Dic</span>
+      </div>
+      <div class="ann-text">
+        <div class="ann-header">
+          <span class="ann-tag"><i class="fas fa-star"></i> Culto</span>
+        </div>
+        <h4>Culto de Fin de Año</h4>
+        <p>Cierre del año congregados en alabanza y gratitud a Dios por todo lo que hizo en el 2026.</p>
+        <div class="ann-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Iglesia Presbiteriana "Luz y Vida" La Unión, Sibilia</span>
+          <span><i class="fas fa-clock"></i> 2:30 PM en adelante</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- REDES SOCIALES -->
  <!-- REDES SOCIALES -->
 <section class="section social">
@@ -272,7 +440,7 @@
   <div class="section-bar"></div>
 
   <p class="social-text">
-    Conéctate con nosotros en nuestras redes sociales
+    Síguenos en todas nuestras redes sociales
   </p>
 
   <div class="social-icons">
@@ -297,14 +465,14 @@
   <section class="section contact">
     <h2 class="section-title">Contáctanos</h2>
     <div class="section-bar"></div>
-    <p>¿Tienes preguntas? Escríbenos o visítanos en cualquier iglesia del distrito.</p>
+    <p>¿Tienes preguntas? Escríbenos.</p>
     <div class="contact-grid">
       <div class="contact-box"><strong>Dirección</strong>Altiplano, Guatemala</div>
       <div class="contact-box"><strong>Correo</strong>info@distritoaltiplano.org</div>
       <div class="contact-box"><strong>Teléfono</strong>+502 0000-0000</div>
       <div class="contact-box"><strong>Horario</strong>Lun–Vie · 8am–5pm</div>
     </div>
-    <a href="#" class="btn">Enviar mensaje</a>
+    
   </section>
 
   <!-- FOOTER -->
@@ -369,5 +537,22 @@
   });
 
   window.addEventListener('resize', () => goTo(current));
+</script>
+
+<script>
+  function toggleHistoria() {
+    const full    = document.getElementById('historiaFull');
+    const btn     = document.getElementById('btnVerMas');
+    const texto   = document.getElementById('btnTexto');
+    const icono   = document.getElementById('btnIcono');
+
+    const abierto = full.classList.toggle('abierto');
+    btn.classList.toggle('abierto', abierto);
+    texto.textContent = abierto ? 'Ver menos' : 'Ver más';
+
+    if (abierto) {
+      full.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
 </script>
 </html>
