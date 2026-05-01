@@ -153,11 +153,209 @@ body {
   color: var(--text-dark);
 }
 
+/*vision y mision*/
+/* ── VISIÓN Y MISIÓN ── */
+.vision-mision {
+  background: var(--white);
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0.5rem;
+}
+
+.vm-card {
+  background: var(--blue-pale);
+  border: 0.5px solid var(--blue-light);
+  border-top: 4px solid var(--navy);
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 58, 107, 0.1);
+}
+
+.vm-icon {
+  width: 58px;
+  height: 58px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.vm-icon i {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.vm-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.vm-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── OBJETIVOS ── */
+.objetivos {
+  background: var(--blue-pale);
+}
+
+/* Objetivo general */
+.obj-general {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.obj-general-icon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.obj-general-icon i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.obj-general-text h3 {
+  font-family: 'Cinzel', serif;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+.obj-general-text p {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Título específicos */
+.obj-esp-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--navy);
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+/* Grid específicos */
+.obj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.obj-card {
+  background: var(--white);
+  border: 0.5px solid var(--blue-light);
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.obj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 58, 107, 0.1);
+}
+
+.obj-num {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--blue-mid);
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.obj-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--blue-pale);
+  border: 1.5px solid var(--blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.obj-icon i {
+  color: var(--navy);
+  font-size: 1.1rem;
+}
+
+.obj-card p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .obj-general {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .obj-general-text p {
+    text-align: center;
+  }
+  .obj-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*
 Carrusel
 */
 /* ── CARRUSEL ── */
-.carrusel-section { background: var(--blue-pale); }
+/* Reemplaza todo lo relacionado al carrusel con esto */
 
 .carrusel {
   display: flex;
@@ -170,6 +368,7 @@ Carrusel
   overflow: hidden;
   border-radius: 12px;
   flex: 1;
+  width: 0; /* <-- Este es el fix clave */
 }
 
 .carrusel-track {
@@ -183,6 +382,7 @@ Carrusel
   position: relative;
   padding: 0 6px;
   flex-shrink: 0;
+  box-sizing: border-box; /* <-- Importante */
 }
 
 .carrusel-slide img {
@@ -253,9 +453,20 @@ Carrusel
   transform: scale(1.25);
 }
 
+/* Móvil */
 @media (max-width: 600px) {
-  .carrusel-slide { min-width: 100%; }
-  .carrusel-btn { width: 32px; height: 32px; font-size: 1.1rem; }
+  .carrusel-slide {
+    min-width: 100%;
+    padding: 0 4px;
+  }
+  .carrusel-slide img {
+    height: 200px;
+  }
+  .carrusel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
 }
 
 /* ── NAV ── */
